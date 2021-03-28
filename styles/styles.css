@@ -11,6 +11,7 @@
     --title-text-color:#212121;
     --button-background-color:#F5F4FA;
     --section-background-color:#2F303A;
+    --icon-color:#AFB1B8;
     --address-color: rgba(255, 255, 255, 0.6);
     --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -338,6 +339,7 @@ box-shadow: var(--button-shadow);
     /* identical to box height */
     
     letter-spacing: 0.03em;
+    margin-bottom: 16px;
 }
 
 .page-footer {
@@ -439,7 +441,8 @@ box-shadow: var(--button-shadow);
   }
 
   .team-list,
-  .progects {
+  .progects,
+  .clients-list {
     /* Расстояние между карточками работников (наша команда) в Студия */
     --person-set-gap: 30px;
   
@@ -509,5 +512,67 @@ box-shadow: var(--button-shadow);
 
   .icon {
       display: inline-flex;
-      fill: var(--main-text-color);
+      fill: currentColor;
   }
+
+  .header-contact .icon {
+      margin-right: 10px;
+  }
+
+  .header-contact li {
+      display: flex;
+  }
+
+  .features-image {
+      display: inline-flex;
+      width: 270px;
+      height: 120px;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--button-background-color);
+
+      margin-bottom: 30px;
+  }
+
+  .sn-list {
+      display: flex;
+      justify-content: space-between;
+  }
+
+  .sn-list .icon {
+      fill: currentColor;
+  }
+
+  .sn-list .link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--icon-color);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+  }
+
+  .sn-list .link:hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--main-background-color);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background-color: var(--accent-color);
+}
+
+.clients-list {
+    display: flex;
+}
+
+.clients-list > .clients-image {
+    flex-basis: calc(100% / 6 - var(--person-set-gap));
+    margin-left: var(--person-set-gap);
+    margin-top: var(--person-set-gap);
+}
+
+.clients-image .link {
+}
